@@ -17,7 +17,7 @@ function ({ results: movieList }) {
         release_date,
         genre_ids,
         overview,
-        poster_path,
+        poster_path,    
         vote_average,
         id,
       } = movie;
