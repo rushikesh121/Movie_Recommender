@@ -19,7 +19,11 @@ export const createMovieCard=function(movie) {
    </div>
    <div class="card-badge">${release_date.split("-")[0]}</div>
 </div>
+
+<a href="./js/detail.html" class="card-btn" title="${title}" onclick="getMovieDetail(${id})
+"></a>
    `;  
+   
    return card;
    
 

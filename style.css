@@ -7,8 +7,11 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
     color: var(--white-);
+    
 }
-
+a{
+    text-decoration: none;
+}
 :root {
     --black-: #000000;
     --white-: #ffffff;
@@ -251,7 +254,7 @@ input[type=search] {
 
 .content {
     position: absolute;
-    top: 0;
+    top: -50px;
     width: 650px;
     display: flex;
     left: 50px;
@@ -264,7 +267,27 @@ input[type=search] {
 a {
     margin-bottom: 25px;
 }
-
+.poster-box,
+.video-card {
+  background-repeat: no-repeat;
+  background-size: 50px;
+  background-position: center;
+  background-color: var(--banner-background);
+  border-radius: var(--radius-16);
+  overflow: hidden;
+}
+.movie-poster{
+    border: 3px solid white;
+    width: 300px;
+    height: 500px;
+    border-radius: 30px;
+}
+.img-cover{
+  
+    width: 100%;
+   height: 100%;
+    object-fit: cover;
+}
 .card-badge {
     background-color: rgb(89, 83, 83);
     color: white;
@@ -273,12 +296,14 @@ a {
 }
 
 .genre {
-    color: var(--text-color);
+    color:white;
     word-spacing: 0.5px;
 }
 
 .banner-text {
-    color: var(--text-color);
+    color: var(--on-surface)
+    letter-spacing: 2px;
+    font-size: 1.1rem;
     word-spacing: 0.2rem;
     font-family: 'Poppins';
     -webkit-line-clamp: 2;
@@ -403,6 +428,7 @@ h3 {
     flex-direction: column;
 }
 
+
 .inner-slider .meta-list {
     gap: 30px;
     display: flex;
@@ -421,6 +447,7 @@ h3 {
     min-height: 300px;
     /* border: 2px solid white; */
 }
+
 
 .detail-content .heading {
     padding: 0;
@@ -443,6 +470,9 @@ h3 {
 .overview {
     margin-top: 18px;
     color: var(--on-surface);
+    line-height: 1.5em;
+    margin-bottom: 30px;
+    margin-top: 30px;
 }
 
 .detail-list {

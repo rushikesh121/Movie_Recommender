@@ -1,6 +1,7 @@
 import { imageBaseUrl, apiKey, fetchData } from "./api.js";
 import { sidebar } from "./sidebar.js";
 import  {createMovieCard} from "./Movie.js";
+import { getMovieDetail } from "./global.js";
 
 sidebar();
 
@@ -28,6 +29,7 @@ function ({ results: movieList }) {
     slider_item.querySelectorAll(".meta-item")[0].innerHTML=release_date;
     slider_item.querySelectorAll(".meta-item")[1].innerHTML=vote_average;
     slider_item.querySelectorAll(".banner-text")[0].innerHTML=overview;
+    document.getElementsByClassName("watch-now")[0].addEventListener('click',getMovieDetail(`${id}`));
     }
 
   
@@ -44,7 +46,7 @@ const homePageSection=[
 
 for(const {title,path} of homePageSection){
   fetchData(`https://api.themoviedb.org/3${path}?api_key=${apiKey}&page=1`,function ({ results: movieList },homePageSection){
-    console.log(movieList)
+    // console.log(movieList)
         const movieListElement=document.createElement("section");
         movieListElement.classList.add("movie-list");
        
@@ -166,6 +168,10 @@ for(const {title,path} of homePageSection){
 document.querySelector(".inner-slider").appendChild(m);
 }
     });
+
+
+    
+    
   
 }
 
