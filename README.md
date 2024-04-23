@@ -16,7 +16,7 @@ Usage
 Clone the repository:
 bash
 Copy code
-git clone https://github.com/your-username/movie-recommender.git
+git clone https://github.com/rushikesh121/Movie_Recommender
 Navigate to the project directory:
 bash
 Copy code
